@@ -6,8 +6,9 @@ import Button from "./Button/Button";
 
 export default function NavBar() {
   const session = useSession();
+
   const handleSignOut = () => {
-    signOut();
+    signOut({ callbackUrl: "/" });
   };
   return (
     <div className="relative w-full bg-cyan-500 flex justify-center items-center py-4 text-3xl light text-white">
